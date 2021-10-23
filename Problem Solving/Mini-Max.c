@@ -1,44 +1,28 @@
-#include <assert.h>
-#include <ctype.h>
-#include <limits.h>
-#include <math.h>
-#include <stdbool.h>
-#include <stddef.h>
-#include <stdint.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
+#include <math.h>
+#include <stdlib.h>
 
-int main()
-{
-    int i,j,size,temp,sum1=0,sum2=0;
-    scanf("%d",&size);
-    int arr[size];
+int main() {
     
-    for(i=0;i<size;i++)
-    {
-        scanf("%d",&arr[i]);
-    }
-    for(i=0;i<size;i++)
-    {
-        for(j=0;j<size;j++)
-        if(arr[j]>arr[i] )
-           {
-            temp=arr[j];
-            arr[j]=arr[i];
-            arr[i]=temp;
-           }
-    }
-       
-    for(i=0;i<(size-1);i++)
-    {
-        sum1 += arr[i];
-    }
-    for(i=1;i<size;i++)
-    {
-        sum2 += arr[i];
-    }
+    int a[5];
+    long sum=0;
     
-    printf("%d %d",sum1,sum2);
-    
+    for(int i=0;i<5;i++){
+        scanf("%d",&a[i]);
+    }
+    for(int i=0;i<5;i++){
+        
+        sum+=a[i];
+    }
+    int min=a[0];
+    int max=a[0];
+    for(int i=1;i<5;i++){
+        if(a[i]>max)
+            max=a[i];
+        if(a[i]<min)
+            min=a[i];
+    }
+    printf("%ld %ld",sum-max,sum-min);
+    return 0;
 }
