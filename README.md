@@ -1,2 +1,2 @@
 # HackerRank
-It includes all good question of HackerRank
+It includes all good questions of HackerRank
