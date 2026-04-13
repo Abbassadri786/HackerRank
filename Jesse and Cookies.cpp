@@ -13,7 +13,7 @@ vector<string> split(const string &);
  *  1. INTEGER k
  *  2. INTEGER_ARRAY A
  */
-
+// using minHeap max elem at top
 int cookies(int k, vector<int> A) {
     // Using Min-Heap Approach
     priority_queue<int, vector<int>, greater<int>> minHeap(A.begin(), A.end());
